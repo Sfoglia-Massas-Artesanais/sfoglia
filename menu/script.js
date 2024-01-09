@@ -1,15 +1,3 @@
-var navbar = document.querySelector('.navbar');
-var menu = document.querySelector('.bx-menu');
-var x = document.querySelector('.navbar .bx-x');
-
-menu.onclick = () => {
-    navbar.classList.add("active");
-};
-
-x.onclick = () => {
-    navbar.classList.remove("active");
-};
-
 const products = [
     { 
         name: "TILÁPIA AO ALHO & ÓLEO", 
@@ -18,7 +6,7 @@ const products = [
         imageUrl: "../imagens/1.avif"
     },
     { 
-        name: "RAVIOLI 3 QUEIJOS AO MOLHO POMODORO", 
+        name: "RAVIÓLI 3 QUEIJOS AO MOLHO POMODORO", 
         descricao: "Massa fresca recheada com uma mistura irresistível de queijos, regada ao delicioso molho pomodoro.", 
         price: "28,00", 
         imageUrl: "../imagens/2.avif"
@@ -93,24 +81,46 @@ const products = [
       resultsDiv.appendChild(productDiv);
     });
   }
+
+  const searchInput = document.getElementById("searchInput");
+  searchInput.addEventListener("keyup", function(event) {
+    if (event.key === "Enter") {
+      search();
+    }
+  });
+
   
   function search() {
     const searchTerm = document.getElementById("searchInput").value.toLowerCase();
     const resultsDiv = document.getElementById("results");
     resultsDiv.innerHTML = "";
   
-    const filteredProducts = products.filter(product =>
-      product.name.toLowerCase().includes(searchTerm)
-    );
+    const loader = document.createElement("div");
+    loader.classList.add("loader");
+    resultsDiv.appendChild(loader);
+
+    const footer = document.querySelector("footer");
+    footer.classList.add("search-funcion");
   
-    if (filteredProducts.length === 0) {
-      resultsDiv.innerHTML = "<p>Nenhum resultado encontrado.</p>";
-    } else {
-      filteredProducts.forEach(product => {
-        const productDiv = createProductElement(product);
-        resultsDiv.appendChild(productDiv);
-      });
-    }
+    setTimeout(() => {
+      loader.style.display = "none";
+      const filteredProducts = products.filter(product =>
+        product.name.toLowerCase().includes(searchTerm)
+      );
+  
+      if (filteredProducts.length === 0) {
+        resultsDiv.innerHTML = "<p>Nenhum resultado encontrado.</p>";
+      } else {
+        filteredProducts.forEach(product => {
+          const productDiv = createProductElement(product);
+          resultsDiv.appendChild(productDiv);
+        });
+        footer.classList.remove("search-funcion");
+      }
+      if (filteredProducts.length <= 4) {
+        footer.classList.add("search-funcion");
+      }
+    }, 2000)
   }
   
   showAllProducts();
@@ -152,7 +162,7 @@ const products = [
     productDiv.appendChild(productImage);
   
     const productInfo = document.createElement("div");
-    productInfo.innerHTML = `<h3>${product.name}</h3> <p>${product.descricao}</p> <h4>R$ ${product.price}</h2>`;
+    productInfo.innerHTML = `<div class="name-desc"><h3>${product.name}</h3> <p>${product.descricao}</p></div> <h4>R$ ${product.price}</h2>`;
     productDiv.appendChild(productInfo);
   
     productDiv.addEventListener("click", () => {
