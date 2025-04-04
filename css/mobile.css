@@ -1,0 +1,126 @@
+@media (max-width: 450px) {
+
+    .navbar-content .navbar{
+        width: 85%;
+        justify-content: space-between;
+    }
+
+    .navbar-content .navbar .navegation{
+        display: none;
+    }
+
+    .navbar-content .navbar .rds{
+        display: none;
+    }
+
+    .landing-page{
+        height: auto;
+        padding: 50px 0;
+    }
+
+    .landing-page .card-content{
+        flex-direction: column;
+    }
+
+    .landing-page .card-content .two, .tree{
+        display: none;
+    }
+
+    .landing-page .info-landing{
+        width: 80%;
+        font-size: 8px;
+    }
+
+    .info-sfoglia{
+        height: auto;
+        padding: 50px;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .info-sfoglia img{
+        height: 250px;
+        margin-bottom: 30px;
+    }
+
+    .info-sfoglia h2{
+        font-size: 18px;
+    }
+
+    .info-sfoglia .info-text-sfoglia ul{
+        margin-right: 0px;
+    }
+
+    .info-sfoglia .info-text-sfoglia p, li{
+        font-size: 8px;
+    }
+
+    .info-sfoglia .info-text-sfoglia .endereco{
+        margin-left: 20px;
+    }
+
+    .info-sfoglia h3{
+        font-size: 14px;
+    }
+
+    .master-chefs-content h1{
+        font-size: 30px;
+        font-weight: 500;
+        margin-top: 50px;
+        margin-bottom: 40px;
+        text-shadow: 1px 1px 2px #000;
+    }
+
+    .master-chefs-content .cards-chefs{
+        flex-direction: column;
+    }
+
+    .categorias-content{
+        height: auto;
+        padding: 30px 0;
+        text-align: center;
+    }
+
+    .categorias-content h1{
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+
+    .categorias-content .grade-categorias{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .categorias-content .categorias{
+        width: 100px;
+        margin: 20px;
+    }
+
+    #detailsContent{
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    #detailsContent img{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #detailsContent .details-desc{
+        width: 100%;
+    }
+
+    #detailsContent .details-desc h1{
+        font-size: 20px;
+    }
+
+    footer{
+        height: auto;
+        padding: 40px;
+        font-size: 6px;
+    }
+    
+    footer .logo{
+        height: 40px;
+    }
+}

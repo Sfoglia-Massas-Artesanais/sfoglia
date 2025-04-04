@@ -1,0 +1,11 @@
+.menu-content{
+    width: 80%;
+    min-height: 100vh;
+    margin-left: 10%;
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+

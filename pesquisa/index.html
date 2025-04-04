@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../assets/logo/logo-sobre.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/landing-page.css">
+    <link rel="stylesheet" href="../css/pesquisa.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/mobile.css">
+    <title>Sfoglia Massas Artesanais</title>
+</head>
+<body>
+    <div class="navbar-content">
+        <nav class="navbar">
+            <a href="../">
+                <img class="logo" src="../assets/logo/sfoglia_logo-sem-fundo.png" alt="sfogliaLogo">
+            </a>
+            <ul class="navegation">
+                <li class="pags"><a href="../">Página Inicial</a></li>
+                <li class="pags"><a href="#">Menu</a></li>
+                <li class="pags"><a href="#">Sfoglia</a></li>
+            </ul>
+            <div class="rds">
+                <a href="https://www.instagram.com/sfogliamassas/"><i class='bx bxl-instagram'></i></a>
+                <a href="https://www.ifood.com.br/delivery/recife-pe/sfoglia-massas-artesanais-varzea/2f66d94e-8da0-410e-90ff-32312fcf2db0?UTM_Medium=share&fbclid=PAZXh0bgNhZW0CMTEAAaZgE7IVbeBNXvGwnNsrC0yG151wYA62ThnoxDtZPUZTlvmYBd00OAMCwHM_aem_iW0kZhR3Zc818lgtz23A_w"><img src="../assets/logo/avatar-ifood.png" alt="ifoodLogo"></a>
+            </div>
+        </nav>
+        <form class="search-content" action="./index.html" method="get">
+            <input type="text" autocomplete="off" id="searchInput" name="search" required placeholder="Procure seu prato preferido!">
+            <button type="submit"><i class='bx bx-search'></i></button>
+        </form>
+    </div>
+    <div class="menu-content" id="results"></div>
+    <footer>
+        <a href="#">
+            <img class="logo" src="../assets/logo/sfoglia_logo-sem-fundo.png" alt="sfogliaLogo">
+        </a>
+        <p>&copy; Copyright 2024 - Sfoglia Massas Artesanais - Todos os direitos reservados ao restaurnte de massas artesanais Sfoglia Massas Artesanais.</p>
+        <p>CNPJ: 51.703.185/0001-31 / Rua Mata Grande, 18 - Várzea / CEP: 50980-050</p>
+    </footer>
+    <script type="module" src="../js/search.js"></script>
+</body>
+</html>
